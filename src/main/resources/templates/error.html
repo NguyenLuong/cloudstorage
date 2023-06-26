@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Error Page</title>
+</head>
+<body>
+<h1>An error occurred!</h1>
+<p th:if="${maxSizeErrMsg}" th:text="${maxSizeErrMsg}"></p>
+<p th:if="${maxSizeErrMsg} == null">
+    We're sorry, the page you are looking for does not exist!
+</p>
+<p>
+    Go back to <a th:href="@{/home}">home page</a>.
+</p>
+</body>
+</html>
